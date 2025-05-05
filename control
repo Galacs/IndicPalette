@@ -6,4 +6,4 @@ Description: Colorize Status Bar Indicators
 Maintainer: Galacs
 Author: Galacs
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: mobilesubstrate (>= 0.9.5000), com.spark.libsparkcolourpicker

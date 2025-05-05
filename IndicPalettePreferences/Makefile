@@ -7,6 +7,7 @@ BUNDLE_NAME = IndicPalettePreferences
 IndicPalettePreferences_FILES = INPRootListController.m
 IndicPalettePreferences_FRAMEWORKS = UIKit
 IndicPalettePreferences_PRIVATE_FRAMEWORKS = Preferences
+IndicPalettePreferences_LIBRARIES = sparkcolourpicker
 IndicPalettePreferences_INSTALL_PATH = /Library/PreferenceBundles
 IndicPalettePreferences_CFLAGS = -fobjc-arc
 
