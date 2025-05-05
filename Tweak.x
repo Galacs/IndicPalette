@@ -10,6 +10,7 @@ static NSHashTable<UIView*> *pillViews;
 
 @interface _UIStatusBarPillView : UIView
 @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
+@property (nonatomic, assign, readwrite) BOOL pulsing;
 @end
 
 %hook _UIStatusBarPillView
@@ -34,6 +35,9 @@ static NSHashTable<UIView*> *pillViews;
       %orig;
   }
 }
+- (void)setPulsing:(BOOL) pulsing {
+    %orig(NO);
+  }
 %end
 
 static void updateSettings(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
