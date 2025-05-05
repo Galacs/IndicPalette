@@ -1,0 +1,9 @@
+Package: com.galacs.indicpalette
+Name: IndicPalette
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Colorize Status Bar Indicators
+Maintainer: Galacs
+Author: Galacs
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
