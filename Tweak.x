@@ -2,22 +2,22 @@
 #import <SparkColourPickerUtils.h>
 #import <rootless.h>
 
-static BOOL isEnabled;
-static UIColor* color;
-
-static UIColor* originalColor = NULL;
-static NSHashTable<UIView*> *pillViews;
-
 @interface _UIStatusBarPillView : UIView
 @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
 @property (nonatomic, assign, readwrite) BOOL pulsing;
 @end
 
+static BOOL isEnabled;
+static UIColor* color;
+
+static UIColor* originalColor = NULL;
+static NSMutableSet<_UIStatusBarPillView*> *pillViews;
+
 %hook _UIStatusBarPillView
 - (void)didMoveToWindow {
     %orig;
     if (!pillViews) {
-        pillViews = [NSHashTable weakObjectsHashTable];
+        pillViews = [[NSMutableSet alloc] init];
     }
     if (self.window) {
         [pillViews addObject:self];
